@@ -2,11 +2,11 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import TextFrom from './components/TextFrom';
-// import About from './components/About';
+import About from './components/About';
 import React, { useState } from 'react';
 import Alert from './components/Alert';
 
-// import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 
 function App() {
@@ -42,7 +42,7 @@ function App() {
   return (
 
     <>
-       {/* <BrowserRouter> */}
+       <BrowserRouter>
       {/* <Navbar /> */}
       {/* <Navbar title="TextUtiles" aboutText="About Us" /> */}
 
@@ -51,14 +51,14 @@ function App() {
 
       <div className="container my-3">
         
-      <TextFrom showAlert={showAlert} heading="Enter the text to analyze my-3" mode={mode} />
-          {/* <Routes>
-            <Route path='/about' element={<About />} />
+      {/* <TextFrom showAlert={showAlert} heading="Enter the text to analyze my-3" mode={mode} /> */}
+          <Routes>
+            <Route path='/about' element={<About mode={mode}/>} />
             <Route path='/' element={<TextFrom showAlert={showAlert} heading="Enter the text to analyze my-3" mode={mode} />} />
-          </Routes> */}
+          </Routes>
        
       </div>
-      {/* </BrowserRouter> */}
+      </BrowserRouter>
     </>
 
   );
